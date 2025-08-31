@@ -1,0 +1,96 @@
+
+
+## 💡 What is Bubble Sort?
+
+Bubble Sort repeatedly steps through the list, compares adjacent items, and **swaps them if they are in the wrong order**. This process is repeated until the list is sorted.
+
+* It "bubbles" the **largest unsorted element** to the **end** in each outer loop iteration.
+
+---
+
+### Initial Array:
+
+```
+[4, 5, 3, 2, 1]
+```
+
+---
+
+## 🔁 Outer Loop — Runs n-1 times (n = 5 here, so 4 passes)
+
+---
+
+### ✅ Pass 1 (i = 0):
+
+We compare **each pair** from left to right:
+
+1. Compare 4 and 5 → no swap
+   `[4, 5, 3, 2, 1]`
+
+2. Compare 5 and 3 → **swap**
+   `[4, 3, 5, 2, 1]`
+
+3. Compare 5 and 2 → **swap**
+   `[4, 3, 2, 5, 1]`
+
+4. Compare 5 and 1 → **swap**
+   `[4, 3, 2, 1, 5]`
+
+📌 After Pass 1: the largest value `5` is in the correct position.
+
+---
+
+### ✅ Pass 2 (i = 1):
+
+Now we go up to index 3 (we don't check the last value again):
+
+1. Compare 4 and 3 → **swap**
+   `[3, 4, 2, 1, 5]`
+
+2. Compare 4 and 2 → **swap**
+   `[3, 2, 4, 1, 5]`
+
+3. Compare 4 and 1 → **swap**
+   `[3, 2, 1, 4, 5]`
+
+📌 Now, `4` is in the correct place.
+
+---
+
+### ✅ Pass 3 (i = 2):
+
+We go up to index 2:
+
+1. Compare 3 and 2 → **swap**
+   `[2, 3, 1, 4, 5]`
+
+2. Compare 3 and 1 → **swap**
+   `[2, 1, 3, 4, 5]`
+
+📌 Now, `3` is in the correct place.
+
+---
+
+### ✅ Pass 4 (i = 3):
+
+1. Compare 2 and 1 → **swap**
+   `[1, 2, 3, 4, 5]`
+
+📌 Now, `2` is in the correct place. And the array is sorted!
+
+---
+
+### Final Sorted Array:
+
+```
+[1, 2, 3, 4, 5]
+```
+
+---
+
+## 🧠 Summary of How Iteration Works:
+
+* The **outer loop** picks how many passes (n-1).
+* The **inner loop** compares adjacent elements and swaps if needed.
+* After each pass, the **next largest element is moved to the correct position at the end**.
+* Inner loop range decreases each time since the last elements are already sorted.

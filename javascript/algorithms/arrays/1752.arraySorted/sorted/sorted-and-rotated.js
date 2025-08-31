@@ -1,7 +1,7 @@
 // Problem link : https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/ 
 
-function isSorted () {
-
+function isSorted (arr , n ) {
+  
 }
 
 const arr = [3,4,5,1,2] ;
